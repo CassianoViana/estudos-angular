@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,eAAe;EAGb,MAAM,EAAE,SAAS;EACjB,KAAK,EAAE,GAAG;EAHV,4BAAY;IACV,KAAK,EAAE,IAAI;EAGb,oCAA2C;IAL7C,eAAe;MAMX,KAAK,EAAE,GAAG;MACV,MAAM,EAAE,UAAU;EACpB,qCAA2C;IAR7C,eAAe;MASX,KAAK,EAAE,GAAG",
+"sources": ["estilo.sass"],
+"names": [],
+"file": "estilo.css"
+}

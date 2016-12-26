@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="users">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+</head>
+<body>
+
+	<div id="containerLogin" ng-controller="LoginController as login" ng-init="login.mode = 'signIn'">
+		<div class="form-group">
+			<label for="user" class="control-label">User</label>
+			<input id="user" name="user" type="text" class="form-control" placeholder="Ex: cassiano@gmail.com">
+		</div>
+		
+		<div class="form-group">
+			<label for="pass" class="control-label">Password</label>
+			<input id="pass" name="pass" type="password" class="form-control" placeholder="Ex: ***********">
+		</div>
+		
+		<div class="checkbox" ng-show="login.mode == 'signIn'">
+		    <label>
+				<input type="checkbox"> Remember
+		    </label>
+	  	</div>
+	  	
+	  	<div ng-show="login.mode == 'signUp'">
+			<button id="btnSignUp" class="btn btn-primary btn-block">SIGN UP</button>
+			<p class="text-center">
+		  		Already have a acount?
+		  		<a class="text-center" ng-click="login.mode = 'signIn'">Sign in</a>
+		  	</p>
+	  	</div>
+	  	
+	  	<div ng-show="login.mode == 'signIn'">
+			<button id="btnSignIn" class="btn btn-primary btn-block">SIGN IN</button>
+			<p class="text-center">
+		  		Don't have a acount?
+		  		<a class="text-center" ng-click="login.mode = 'signUp'">Create a account</a>
+		  	</p>
+		  	<p class="text-center">
+		  		<a class="text-center">Forgot password?</a>
+		  	</p>
+	  	</div>
+	</div>
+
+</body>
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+</html>
