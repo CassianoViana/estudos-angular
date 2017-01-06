@@ -1,1 +1,1 @@
-angular.module("myapp", ["ngMessages", "ui", "ngRoute"]);
+var app = angular.module("myapp", ["ngRoute"]);

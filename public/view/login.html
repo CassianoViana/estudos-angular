@@ -1,0 +1,55 @@
+<style type="text/css">
+    .login-container {
+      width: 400px;
+	  margin: 12% auto;
+    }
+	#title-area {
+		text-align: center;
+		margin: 20px;
+	}
+  </style>
+<div class="ui middle aligned grid" ng-init="login.mode = 'signIn'">
+	<div class="login-container">
+
+		<div id="title-area">
+			<h1>MyAPP</h1>
+		</div>
+
+		<form class="ui form">
+
+			<div class="field">
+				<input id="user" name="user" type="text" placeholder="Email">
+			</div>
+
+			<div class="field">
+				<input id="pass" name="pass" type="password" placeholder="Password">
+			</div>
+
+			<div class="field">
+				<div class="ui checkbox" ng-show="login.mode == 'signIn'">
+					<input type="checkbox"> 
+					<label> Remember </label>
+				</div>
+				
+				<a class="text-center">Forgot password?</a>
+				
+			</div>
+
+			<div ng-show="login.mode == 'signUp'">
+				<button id="btnSignUp" class="fluid ui primary button">SIGN UP</button>
+				<p class="text-center">
+					Already have a acount?
+					<a class="text-center" ng-click="login.mode = 'signIn'">Sign in</a>
+				</p>
+			</div>
+
+			<div ng-show="login.mode == 'signIn'">
+				<button id="btnSignIn" class="fluid ui primary button">SIGN IN</button>
+				<p>
+					Don't have a acount?
+					<a class="text-center" ng-click="login.mode = 'signUp'">Create a account</a>
+				</p>
+			</div>
+		</form>
+		</div>
+	</div>
